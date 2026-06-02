@@ -22,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=15" />
+    <link rel="stylesheet" href="styles.css?v=16" />
   </head>
   <body>
     <header class="site-header" id="inicio">
@@ -82,8 +82,6 @@
           <p class="hero-support">Limpieza rápida, cómoda y cercana para el día a día.</p>
           <div class="quick-info" aria-label="Información rápida">
             <a href="tel:+34670607756">670 607 756</a>
-            <span>Passeig de l'Estació, 21</span>
-            <span>Abierto de 8:00 a 22:00</span>
           </div>
           <div class="hero-actions" aria-label="Acciones principales">
             <a class="btn btn-primary" href="#ubicacion">Cómo llegar</a>
@@ -151,6 +149,37 @@
         </div>
       </section>
 
+      <section class="posters section-shell" id="mascotas" aria-labelledby="posters-title">
+        <div class="section-heading">
+          <p class="eyebrow">Carteles reales</p>
+          <h2 id="posters-title">Carteles del local</h2>
+          <p>Horario, dirección, precios y servicios tal como aparecen para los clientes.</p>
+        </div>
+
+        <div class="poster-grid">
+          <figure class="poster-card">
+            <picture>
+              <source srcset="assets/real/rayo-washing-cartel-horario.webp" type="image/webp" />
+              <img
+                src="assets/real/rayo-washing-cartel-horario.png"
+                alt="Cartel de Rayo Washing con horario, dirección y oferta de secado"
+                loading="lazy"
+              />
+            </picture>
+          </figure>
+          <figure class="poster-card">
+            <picture>
+              <source srcset="assets/real/rayo-washing-cartel-precios.webp" type="image/webp" />
+              <img
+                src="assets/real/rayo-washing-cartel-precios.png"
+                alt="Cartel de Rayo Washing con precios de lavado y servicio para mascotas"
+                loading="lazy"
+              />
+            </picture>
+          </figure>
+        </div>
+      </section>
+
       <section class="services section-shell" id="servicios" aria-labelledby="services-title">
         <div class="section-heading">
           <p class="eyebrow">Ropa, hogar y cuidados extra</p>
@@ -179,43 +208,6 @@
             <h3>Costura y planchado</h3>
             <p>Arreglos y planchado para tus prendas.</p>
           </article>
-        </div>
-      </section>
-
-      <section class="pet-section" id="mascotas" aria-labelledby="pets-title">
-        <div class="section-shell pet-layout">
-          <div class="pet-copy">
-            <p class="eyebrow">Servicio estrella</p>
-            <h2 id="pets-title">Tu mascota también tiene su espacio</h2>
-            <p>
-              En Rayo Washing contamos con una lavadora específica para textiles de mascotas, ideal para lavar
-              mantas, camas, fundas, toallas, peluches y accesorios con pelos u olores.
-            </p>
-            <div class="benefit-list">
-              <span>Más higiénico</span>
-              <span>Separado de tu ropa diaria</span>
-              <span>Ideal para mantas y camas</span>
-              <span>Cómodo y rápido</span>
-            </div>
-            <a
-              class="btn btn-primary pet-cta"
-              href="https://wa.me/34670607756"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Preguntar por la lavadora de mascotas
-            </a>
-          </div>
-
-          <div class="pet-visual" aria-hidden="true">
-            <div class="pet-washer">
-              <span class="pet-window"></span>
-              <span class="pet-bolt"></span>
-            </div>
-            <div class="paw paw-one"></div>
-            <div class="paw paw-two"></div>
-            <div class="paw paw-three"></div>
-          </div>
         </div>
       </section>
 
@@ -298,16 +290,8 @@
 
           <dl class="info-list">
             <div>
-              <dt>Dirección</dt>
-              <dd>Passeig de l'Estació, 21, 08630 Abrera, Barcelona</dd>
-            </div>
-            <div>
               <dt>Teléfono</dt>
               <dd>670 607 756</dd>
-            </div>
-            <div>
-              <dt>Horario</dt>
-              <dd>De 8:00 a 22:00, los siete días de la semana</dd>
             </div>
           </dl>
 
