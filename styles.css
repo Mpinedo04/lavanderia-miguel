@@ -538,6 +538,7 @@ h3 {
 .real-place,
 .gallery,
 .posters,
+.prices,
 .services,
 .steps,
 .extras,
@@ -551,6 +552,7 @@ h3 {
 .real-place > *,
 .gallery > *,
 .posters > *,
+.prices > *,
 .services > *,
 .steps > *,
 .extras > *,
@@ -562,6 +564,7 @@ h3 {
 .real-place::before,
 .gallery::before,
 .posters::before,
+.prices::before,
 .services::before,
 .steps::before,
 .extras::before,
@@ -588,6 +591,7 @@ h3 {
 .real-place::after,
 .gallery::after,
 .posters::after,
+.prices::after,
 .services::after,
 .steps::after,
 .extras::after,
@@ -623,6 +627,11 @@ h3 {
 .posters {
   --bubble-a: rgba(255, 178, 60, 0.26);
   --bubble-b: rgba(126, 212, 255, 0.18);
+}
+
+.prices {
+  --bubble-a: rgba(255, 81, 56, 0.16);
+  --bubble-b: rgba(255, 178, 60, 0.16);
 }
 
 .services {
@@ -673,6 +682,16 @@ h3 {
 .posters::after {
   right: -8px;
   bottom: 10%;
+}
+
+.prices::before {
+  right: -22px;
+  top: 14%;
+}
+
+.prices::after {
+  left: 7%;
+  bottom: 6%;
 }
 
 .services::before {
@@ -761,6 +780,10 @@ h3 {
   padding: 30px 0 84px;
 }
 
+.prices {
+  padding: 30px 0 84px;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -798,6 +821,58 @@ h3 {
   height: auto;
 }
 
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.price-card {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  min-height: 154px;
+  padding: 22px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 34px rgba(19, 89, 132, 0.08);
+  text-align: center;
+  transition:
+    transform var(--ease),
+    box-shadow var(--ease);
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(19, 89, 132, 0.14);
+}
+
+.price-card span {
+  color: var(--deep);
+  font-weight: 900;
+}
+
+.price-card strong {
+  color: var(--bolt-dark);
+  font-family: "Fredoka", Arial, sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1;
+}
+
+.price-card small {
+  color: #55738b;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.price-card.featured {
+  border-color: rgba(255, 81, 56, 0.26);
+  background:
+    radial-gradient(circle at 50% 0, rgba(255, 178, 60, 0.12), transparent 52%),
+    linear-gradient(180deg, #fff 0%, #fff4ef 100%);
+}
+
 .gallery-grid figure {
   overflow: hidden;
   margin: 0;
@@ -831,6 +906,7 @@ h3 {
 }
 
 .services,
+.prices,
 .steps,
 .extras,
 .location {
@@ -839,7 +915,7 @@ h3 {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 
@@ -943,24 +1019,6 @@ h3 {
   top: 12px;
   left: 14px;
   box-shadow: 11px -2px 0 var(--sun), 22px 0 0 var(--sun);
-}
-
-.icon-iron::before {
-  width: 32px;
-  height: 20px;
-  border: 3px solid var(--deep);
-  border-top-left-radius: 18px;
-  border-bottom-right-radius: 8px;
-  transform: skewX(-14deg);
-  background: #fff;
-}
-
-.icon-iron::after {
-  width: 18px;
-  height: 4px;
-  border-radius: 999px;
-  background: var(--aqua);
-  top: 14px;
 }
 
 .pet-section {
@@ -1471,6 +1529,7 @@ h3 {
   .service-grid,
   .gallery-grid,
   .poster-grid,
+  .price-grid,
   .step-track {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1556,6 +1615,7 @@ h3 {
   .service-grid,
   .gallery-grid,
   .poster-grid,
+  .price-grid,
   .step-track,
   .extras-grid,
   .trust-grid,
@@ -1583,6 +1643,7 @@ h3 {
   .services,
   .gallery,
   .posters,
+  .prices,
   .steps,
   .location {
     padding: 56px 0;
