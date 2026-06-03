@@ -961,11 +961,16 @@ h3 {
   position: relative;
   display: grid;
   place-items: center;
-  width: 68px;
-  height: 68px;
+  width: 74px;
+  height: 74px;
   margin: 0 auto 22px;
   border-radius: var(--radius);
-  background: var(--sky-soft);
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.92) 0 10%, transparent 11%),
+    linear-gradient(135deg, #d9f5ff, #b7efff);
+  box-shadow:
+    inset 0 -8px 18px rgba(29, 184, 212, 0.16),
+    0 10px 24px rgba(19, 89, 132, 0.1);
 }
 
 .icon::before,
@@ -975,56 +980,90 @@ h3 {
 }
 
 .icon-wash::before {
-  width: 28px;
-  height: 32px;
+  width: 34px;
+  height: 42px;
   border: 3px solid var(--deep);
-  border-radius: 7px;
-  background: #fff;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 48% 68%, transparent 0 10px, var(--aqua) 11px 13px, transparent 14px),
+    radial-gradient(circle at 46% 66%, rgba(255, 255, 255, 0.95) 0 5px, #9befff 6px 12px, #1d66aa 13px 17px, transparent 18px),
+    linear-gradient(180deg, #ffffff 0 22%, #dff8ff 23% 100%);
+  box-shadow:
+    inset 0 -5px 0 rgba(29, 184, 212, 0.12),
+    0 4px 0 rgba(23, 59, 103, 0.08);
 }
 
 .icon-wash::after {
-  width: 15px;
-  height: 15px;
-  border: 3px solid var(--aqua);
+  width: 4px;
+  height: 4px;
+  top: 20px;
+  left: 27px;
   border-radius: 50%;
-  bottom: 11px;
+  background: var(--bolt);
+  box-shadow:
+    9px 0 0 var(--aqua),
+    20px 0 0 var(--deep),
+    20px 0 0 2px rgba(23, 59, 103, 0.08);
+}
+
+.icon-dry {
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.92) 0 10%, transparent 11%),
+    linear-gradient(135deg, #fff3d8, #d9f5ff 72%);
 }
 
 .icon-dry::before {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   border: 3px solid var(--deep);
   border-radius: 50%;
+  background:
+    conic-gradient(from 35deg, var(--sun), var(--bolt) 24%, transparent 25% 53%, var(--aqua) 54% 74%, transparent 75%),
+    radial-gradient(circle, #fff 0 45%, #dff8ff 46% 100%);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.58);
 }
 
 .icon-dry::after {
-  width: 14px;
-  height: 14px;
+  width: 19px;
+  height: 19px;
+  right: 17px;
+  top: 18px;
   border-top: 4px solid var(--sun);
   border-right: 4px solid var(--sun);
   transform: rotate(45deg);
+  filter: drop-shadow(0 3px 0 rgba(255, 178, 60, 0.18));
 }
 
 .icon-paw {
-  background: #fff2ee;
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.94) 0 10%, transparent 11%),
+    linear-gradient(135deg, #fff3ee, #dff8ff);
 }
 
 .icon-paw::before {
-  width: 22px;
-  height: 18px;
-  border-radius: 50% 50% 44% 44%;
-  background: var(--bolt);
-  bottom: 11px;
+  width: 31px;
+  height: 27px;
+  bottom: 13px;
+  left: 24px;
+  border-radius: 52% 52% 46% 46%;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.28) 0 16%, transparent 17%),
+    linear-gradient(180deg, var(--bolt), #e84231);
+  transform: rotate(-4deg);
+  box-shadow: 0 5px 0 rgba(213, 46, 37, 0.12);
 }
 
 .icon-paw::after {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--sun);
-  top: 12px;
-  left: 14px;
-  box-shadow: 11px -2px 0 var(--sun), 22px 0 0 var(--sun);
+  top: 17px;
+  left: 18px;
+  box-shadow:
+    13px -5px 0 var(--sun),
+    28px -4px 0 var(--sun),
+    39px 6px 0 var(--sun);
 }
 
 .pet-section {
