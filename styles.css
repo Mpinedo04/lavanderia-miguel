@@ -287,7 +287,9 @@ textarea {
   inset: 18px -18px 42px;
   z-index: -2;
   border-radius: 18px 18px 54px 54px;
-  background: linear-gradient(180deg, #c7f1ff 0%, #eefcff 72%, #ffffff 100%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0) 16%, rgba(255, 255, 255, 0) 76%, rgba(255, 255, 255, 0.98) 100%),
+    linear-gradient(90deg, #c7f1ff 0%, #eefcff 48%, #d8f6ff 100%);
 }
 
 .bubble-field span,
@@ -547,6 +549,10 @@ h3 {
   --bubble-b: rgba(255, 255, 255, 0.62);
   position: relative;
   isolation: isolate;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 0.98) 100%),
+    linear-gradient(90deg, rgba(220, 247, 255, 0.46) 0%, rgba(255, 255, 255, 0.2) 48%, rgba(239, 252, 255, 0.58) 100%);
+  border-radius: 28px;
 }
 
 .real-place > *,
@@ -1237,7 +1243,9 @@ h3 {
   isolation: isolate;
   overflow: hidden;
   padding: 72px 0;
-  background: linear-gradient(135deg, var(--deep), #206b93 68%, var(--aqua));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 0.98) 100%),
+    linear-gradient(135deg, var(--deep), #206b93 68%, var(--aqua));
 }
 
 .trust::before {
@@ -1338,6 +1346,7 @@ h3 {
   padding: 78px 0;
   color: #fff;
   background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 0.98) 100%),
     linear-gradient(135deg, var(--aqua), var(--deep));
 }
 
