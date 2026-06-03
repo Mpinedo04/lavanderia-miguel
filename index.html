@@ -22,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=19" />
+    <link rel="stylesheet" href="styles.css?v=20" />
   </head>
   <body>
     <header class="site-header" id="inicio">
@@ -80,7 +80,7 @@
           <p class="hero-subtitle">
             Lavandería autoservicio en Abrera para tu ropa, edredones y textiles de mascotas.
           </p>
-          <p class="hero-support">Limpieza rápida, cómoda y cercana para el día a día.</p>
+          <p class="hero-support">Limpieza rápida y cercana para el día a día.</p>
           <div class="quick-info" aria-label="Información rápida">
             <a href="tel:+34670607756">670 607 756</a>
           </div>
@@ -111,10 +111,10 @@
         </div>
         <div class="real-place-copy">
           <p class="eyebrow">El local real</p>
-          <h2 id="real-place-title">Máquinas cómodas y espacio pensado para lavar sin complicarte</h2>
+          <h2 id="real-place-title">Un local claro, climatizado y fácil de usar</h2>
           <p>
-            Una lavandería autoservicio local climatizada, con lavadoras, secadoras y zona de trabajo clara para ropa
-            diaria, edredones, mantas y textiles de mascotas.
+            Espacio real de Rayo Washing con máquinas visibles, zona de apoyo y ambiente cuidado para hacer la colada
+            con tranquilidad.
           </p>
         </div>
       </section>
@@ -123,7 +123,7 @@
         <div class="section-heading">
           <p class="eyebrow">Fotos reales</p>
           <h2 id="gallery-title">Así es Rayo Washing por dentro</h2>
-          <p>Máquinas visibles, zona amplia y un espacio claro para hacer la colada con comodidad.</p>
+          <p>Una mirada rápida al interior para que sepas qué encontrarás al llegar.</p>
         </div>
         <div class="gallery-grid">
           <figure>
@@ -145,7 +145,7 @@
               <source srcset="assets/real/rayo-local-vista-2.webp" type="image/webp" />
               <img src="assets/real/rayo-local-vista-2.jpg" alt="Zona de secadoras y espera de Rayo Washing" loading="lazy" />
             </picture>
-            <figcaption>Zona cómoda y luminosa</figcaption>
+            <figcaption>Zona luminosa</figcaption>
           </figure>
         </div>
       </section>
@@ -154,7 +154,7 @@
         <div class="section-heading">
           <p class="eyebrow">Carteles reales</p>
           <h2 id="posters-title">Carteles del local</h2>
-          <p>Horario, dirección, precios y servicios tal como aparecen para los clientes.</p>
+          <p>Información visible del establecimiento, fotografiada tal como se muestra en el local.</p>
         </div>
 
         <div class="poster-grid">
@@ -218,22 +218,54 @@
         <div class="section-heading">
           <p class="eyebrow">Ropa, hogar y mascotas</p>
           <h2 id="services-title">Servicios principales</h2>
-          <p>Soluciones cómodas para lavar, secar y cuidar prendas de uso diario, textiles grandes y ropa del hogar.</p>
+          <p>Lavado, secado y máquinas específicas para distintos tipos de colada.</p>
         </div>
 
         <div class="service-grid">
           <article class="service-card">
-            <span class="icon icon-wash" aria-hidden="true"></span>
+            <span class="icon service-icon icon-wash" aria-hidden="true">
+              <svg viewBox="0 0 80 80" role="img">
+                <rect class="icon-body" x="22" y="13" width="36" height="52" rx="8" />
+                <path class="icon-panel" d="M22 25H58" />
+                <circle class="icon-dot icon-dot-red" cx="31" cy="20" r="2.7" />
+                <circle class="icon-dot icon-dot-blue" cx="40" cy="20" r="2.7" />
+                <rect class="icon-slot" x="46" y="17" width="9" height="5" rx="1.6" />
+                <circle class="icon-door" cx="40" cy="44" r="15" />
+                <path class="icon-wave" d="M29 45c5-5 10 5 16 0 3-2 5-3 8-1" />
+                <circle class="icon-shine" cx="34" cy="38" r="3" />
+              </svg>
+            </span>
             <h3>Lavado autoservicio</h3>
             <p>Ropa diaria, mantas y prendas grandes.</p>
           </article>
           <article class="service-card">
-            <span class="icon icon-dry" aria-hidden="true"></span>
+            <span class="icon service-icon icon-dry" aria-hidden="true">
+              <svg viewBox="0 0 80 80" role="img">
+                <circle class="icon-drum" cx="40" cy="40" r="22" />
+                <path class="icon-air icon-air-one" d="M25 41c5-8 13-8 20-1s12 6 17 0" />
+                <path class="icon-air icon-air-two" d="M28 51c5-4 10-4 15 0 4 3 8 3 12 0" />
+                <path class="icon-arrow" d="M52 21h12v12" />
+                <path class="icon-arrow" d="M63 22A28 28 0 0 1 67 39" />
+                <circle class="icon-heat" cx="30" cy="29" r="4" />
+              </svg>
+            </span>
             <h3>Secado</h3>
             <p>Ropa lista de forma rápida.</p>
           </article>
           <article class="service-card featured">
-            <span class="icon icon-paw" aria-hidden="true"></span>
+            <span class="icon service-icon icon-paw" aria-hidden="true">
+              <svg viewBox="0 0 80 80" role="img">
+                <rect class="icon-mini-washer" x="17" y="16" width="28" height="38" rx="7" />
+                <path class="icon-mini-panel" d="M17 27H45" />
+                <circle class="icon-mini-door" cx="31" cy="39" r="10" />
+                <path class="icon-wave" d="M23 40c3-4 6 3 10 0 3-2 5-2 7 0" />
+                <path class="paw-pad" d="M56 50c-7 0-13 5-13 11 0 5 4 8 13 8s13-3 13-8c0-6-6-11-13-11Z" />
+                <circle class="paw-toe" cx="45" cy="43" r="5" />
+                <circle class="paw-toe" cx="55" cy="38" r="5" />
+                <circle class="paw-toe" cx="65" cy="43" r="5" />
+                <circle class="paw-toe" cx="70" cy="53" r="4.5" />
+              </svg>
+            </span>
             <h3>Lavadora para mascotas</h3>
             <p>Mantas, camas, toallas y accesorios.</p>
           </article>
@@ -251,7 +283,7 @@
           <article class="step">
             <strong>01</strong>
             <h3>Trae tu ropa o textiles</h3>
-            <p>Ropa diaria, mantas, edredones o textiles de mascotas.</p>
+            <p>Ropa diaria, mantas, edredones o piezas especiales.</p>
           </article>
           <article class="step">
             <strong>02</strong>
@@ -260,8 +292,8 @@
           </article>
           <article class="step">
             <strong>03</strong>
-            <h3>Espera cómodamente</h3>
-            <p>Un proceso pensado para ser práctico y directo.</p>
+            <h3>Espera o vuelve después</h3>
+            <p>Un proceso práctico para seguir con tu día.</p>
           </article>
           <article class="step">
             <strong>04</strong>
@@ -274,7 +306,7 @@
       <section class="extras section-shell" id="extras" aria-labelledby="extras-title">
         <div class="section-heading compact">
           <p class="eyebrow">Comodidades</p>
-          <h2 id="extras-title">Pensado para lavar cómodo</h2>
+          <h2 id="extras-title">Detalles que ayudan</h2>
         </div>
 
         <div class="extras-grid">
@@ -282,8 +314,8 @@
           <span>Jabón y suavizante incluido</span>
           <span>Fácil aparcamiento cerca</span>
           <span>Lavado de mantas y edredones</span>
-          <span>Textiles de mascotas</span>
-          <span>Ropa diaria</span>
+          <span>Máquinas de gran capacidad</span>
+          <span>Autoservicio sencillo</span>
         </div>
       </section>
 
@@ -291,12 +323,12 @@
         <div class="section-shell trust-layout">
           <div>
             <p class="eyebrow">Cercanía y confianza</p>
-            <h2 id="trust-title">Negocio local en Abrera, pensado para el día a día</h2>
+            <h2 id="trust-title">Cerca de casa y con precios visibles</h2>
           </div>
           <div class="trust-grid">
-            <span>Lavandería rápida y cómoda</span>
-            <span>Local climatizado</span>
-            <span>Servicios para ropa, hogar y mascotas</span>
+            <span>Tarifas claras antes de empezar</span>
+            <span>Local cuidado y reconocible</span>
+            <span>Autoservicio directo</span>
             <span>Atención cercana</span>
           </div>
         </div>
@@ -397,7 +429,7 @@
           <span>Lavado</span>
           <span>Secado</span>
           <span>Mascotas</span>
-          <span>Local climatizado</span>
+          <span>Abrera</span>
         </div>
         <p class="legal">
           © <span id="year"></span> Rayo Washing.
