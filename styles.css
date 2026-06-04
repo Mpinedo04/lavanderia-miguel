@@ -982,9 +982,12 @@ h3 {
     linear-gradient(135deg, #fff3ee, #dff8ff);
 }
 
+.service-icon img,
 .service-icon svg {
   width: 62px;
   height: 62px;
+  display: block;
+  object-fit: contain;
   overflow: visible;
 }
 
@@ -1289,7 +1292,7 @@ h3 {
 .trust {
   position: relative;
   isolation: isolate;
-  overflow: visible;
+  overflow: hidden;
   padding: 72px 0;
   background: transparent;
 }
@@ -1297,11 +1300,11 @@ h3 {
 .trust::before {
   content: "";
   position: absolute;
-  inset: -118px 0;
+  inset: 0;
   z-index: 0;
   background:
     radial-gradient(ellipse at 12% 48%, rgba(29, 184, 212, 0.38), transparent 62%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.98)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 0.98)),
     linear-gradient(135deg, rgba(23, 59, 103, 0.94), rgba(32, 107, 147, 0.86) 68%, rgba(29, 184, 212, 0.76));
   filter: blur(8px);
   pointer-events: none;
@@ -1402,7 +1405,7 @@ h3 {
 .contact {
   position: relative;
   isolation: isolate;
-  overflow: visible;
+  overflow: hidden;
   padding: 78px 0;
   color: #fff;
   background: transparent;
@@ -1411,11 +1414,11 @@ h3 {
 .contact::before {
   content: "";
   position: absolute;
-  inset: -132px 0 -34px;
+  inset: 0;
   z-index: 0;
   background:
     radial-gradient(ellipse at 10% 50%, rgba(126, 212, 255, 0.36), transparent 62%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0) 32%, rgba(255, 255, 255, 0) 64%, rgba(255, 255, 255, 0.98)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 0.98)),
     linear-gradient(135deg, rgba(29, 184, 212, 0.9), rgba(23, 59, 103, 0.9));
   filter: blur(10px);
   pointer-events: none;
