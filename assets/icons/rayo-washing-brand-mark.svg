@@ -1,0 +1,83 @@
+<svg width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="rw-title rw-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="rw-title">Rayo Washing</title>
+  <desc id="rw-desc">Marca de Rayo Washing con lavadora, agua azul y rayo naranja</desc>
+
+  <defs>
+    <linearGradient id="rw-bg" x1="16" y1="10" x2="116" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7FEFF"/>
+      <stop offset="0.56" stop-color="#DDF8FF"/>
+      <stop offset="1" stop-color="#BFEFFF"/>
+    </linearGradient>
+    <linearGradient id="rw-body" x1="35" y1="20" x2="80" y2="106" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#F4FBFF"/>
+      <stop offset="1" stop-color="#D7E9F4"/>
+    </linearGradient>
+    <linearGradient id="rw-panel" x1="34" y1="20" x2="86" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D9F2FA"/>
+    </linearGradient>
+    <radialGradient id="rw-door" cx="52" cy="48" r="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.18" stop-color="#9CF4FF"/>
+      <stop offset="0.58" stop-color="#22C4EF"/>
+      <stop offset="1" stop-color="#066CA8"/>
+    </radialGradient>
+    <linearGradient id="rw-water" x1="44" y1="70" x2="86" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#44E2FF"/>
+      <stop offset="1" stop-color="#087BC1"/>
+    </linearGradient>
+    <linearGradient id="rw-bolt" x1="86" y1="20" x2="108" y2="107" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE47A"/>
+      <stop offset="0.36" stop-color="#FFB22E"/>
+      <stop offset="1" stop-color="#FF4E2A"/>
+    </linearGradient>
+    <clipPath id="rw-door-clip">
+      <circle cx="65" cy="73" r="18"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(-5 0) scale(1.08 1)">
+    <rect x="5" y="5" width="118" height="118" rx="30" fill="url(#rw-bg)"/>
+    <path d="M16 37c7-16 23-25 46-25 25 0 44 11 54 31" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.62"/>
+    <circle cx="103" cy="30" r="8" fill="#FFFFFF" opacity="0.38"/>
+    <circle cx="23" cy="92" r="5" fill="#FFFFFF" opacity="0.56"/>
+    <ellipse cx="64" cy="112" rx="36" ry="7" fill="#0A3457" opacity="0.13"/>
+
+    <g>
+      <rect x="32" y="21" width="64" height="91" rx="16" fill="#0A3457" opacity="0.16"/>
+      <rect x="30" y="16" width="64" height="94" rx="16" fill="url(#rw-body)" stroke="#123B68" stroke-width="4"/>
+      <path d="M46 16h32c8.8 0 16 7.2 16 16v18H30V32c0-8.8 7.2-16 16-16Z" fill="url(#rw-panel)"/>
+      <path d="M34 50h56" stroke="#123B68" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
+      <path d="M45 19c-6.8 0-12 5.2-12 12" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.88"/>
+
+      <circle cx="45" cy="33" r="5.5" fill="#FF6238"/>
+      <circle cx="59" cy="33" r="5.5" fill="#22C4EF"/>
+      <circle cx="45" cy="33" r="2.1" fill="#FFFFFF" opacity="0.78"/>
+      <circle cx="59" cy="33" r="2.1" fill="#FFFFFF" opacity="0.78"/>
+      <rect x="70" y="27" width="16" height="11" rx="3.5" fill="#123B68"/>
+      <rect x="74" y="31" width="8" height="3.5" rx="1.7" fill="#89F3FF"/>
+
+      <circle cx="65" cy="73" r="27" fill="#FFFFFF" stroke="#123B68" stroke-width="4"/>
+      <circle cx="65" cy="73" r="21.5" fill="#CFE5EF"/>
+      <circle cx="65" cy="73" r="18" fill="url(#rw-door)" stroke="#23BDE9" stroke-width="2.6"/>
+
+      <g clip-path="url(#rw-door-clip)">
+        <path d="M43 74c6-5.8 11 4.8 17.5-.3 6.2-4.8 11.2-5.4 17.6-.3 5.6 4.5 10.1 3.2 15.9-1v23H43Z" fill="url(#rw-water)"/>
+        <path d="M45 78c5.6-4.5 10.4 3.8 16.2-.4 6.2-4.4 10.7-4.8 16.5-.3 5 3.9 9.4 3.1 14.1-.8" fill="none" stroke="#EAFEFF" stroke-width="2.7" stroke-linecap="round" opacity="0.9"/>
+        <circle cx="55" cy="63" r="3.8" fill="#FFFFFF" opacity="0.68"/>
+        <circle cx="77" cy="84" r="2.4" fill="#FFFFFF" opacity="0.44"/>
+      </g>
+
+      <ellipse cx="58" cy="62" rx="8.2" ry="5.6" fill="#FFFFFF" opacity="0.42" transform="rotate(-28 58 62)"/>
+    </g>
+
+    <g>
+      <path d="M101 22 75 69h15l-9 43 39-59h-18l10-31Z" fill="#123B68" opacity="0.24"/>
+      <path d="M99 18 73 65h15l-9 43 39-59h-18l10-31Z" fill="url(#rw-bolt)" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M99 18 73 65h15l-9 43 39-59h-18l10-31Z" fill="url(#rw-bolt)" stroke="#C94319" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M97 26 80 60h12" fill="none" stroke="#FFF4B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+      <path d="M88 95 110 56h-10" fill="none" stroke="#9C2D14" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+    </g>
+  </g>
+</svg>
