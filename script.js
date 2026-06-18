@@ -3,7 +3,7 @@ const navLinks = document.querySelectorAll(".main-nav a");
 const year = document.querySelector("#year");
 const contactForm = document.querySelector(".contact-form");
 const revealTargets = document.querySelectorAll(
-  ".real-place, .gallery, .services, .pet-section, .steps, .extras, .trust, .location, .contact"
+  ".real-place, .gallery, .services, .steps, .extras, .trust, .location, .contact"
 );
 
 if (year) {
