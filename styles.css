@@ -1487,10 +1487,9 @@ h3 {
 .map-frame {
   min-height: 660px;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-top: 8px solid var(--aqua);
+  border: 1px solid rgba(9, 20, 31, 0.16);
   background: var(--white);
-  box-shadow: 0 22px 48px rgba(9, 20, 31, 0.14);
+  box-shadow: 0 20px 50px rgba(9, 20, 31, 0.12);
 }
 
 .map-frame iframe {
@@ -2397,8 +2396,7 @@ h3 {
   }
 
   .map-frame {
-    border-top-width: 6px;
-    box-shadow: 0 16px 32px rgba(9, 20, 31, 0.13);
+    box-shadow: 0 14px 30px rgba(9, 20, 31, 0.11);
   }
 
   .contact {
