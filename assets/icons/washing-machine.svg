@@ -1,50 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" width="100%" height="100%" aria-label="Icono Lavadora">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" role="img" aria-labelledby="wash-title wash-desc">
+  <title id="wash-title">Lavadora autoservicio</title>
+  <desc id="wash-desc">Lavadora frontal moderna con agua y burbujas en el tambor</desc>
   <defs>
-    <linearGradient id="wm-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#eef8fc"/>
+    <linearGradient id="wash-case" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.58" stop-color="#f7fbfd"/>
+      <stop offset="1" stop-color="#d8e7ef"/>
     </linearGradient>
-    <linearGradient id="wm-door" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1db8d4"/>
-      <stop offset="100%" stop-color="#173b67"/>
+    <linearGradient id="wash-side" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c7dce8"/>
+      <stop offset="1" stop-color="#8db1c6"/>
     </linearGradient>
-    <linearGradient id="wm-water" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#1db8d4" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#7ed4ff" stop-opacity="0.4"/>
+    <linearGradient id="wash-panel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#163d68"/>
+      <stop offset="1" stop-color="#0b6ba0"/>
     </linearGradient>
+    <radialGradient id="wash-glass" cx="36%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#bff7ff"/>
+      <stop offset="0.36" stop-color="#41cee8"/>
+      <stop offset="0.72" stop-color="#0785bb"/>
+      <stop offset="1" stop-color="#063963"/>
+    </radialGradient>
+    <linearGradient id="wash-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#72e7f5"/>
+      <stop offset="1" stop-color="#0ba4d2"/>
+    </linearGradient>
+    <linearGradient id="wash-metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.28" stop-color="#a9c6d6"/>
+      <stop offset="0.55" stop-color="#f8fcff"/>
+      <stop offset="1" stop-color="#789aaf"/>
+    </linearGradient>
+    <clipPath id="wash-drum-clip">
+      <circle cx="329" cy="307" r="104"/>
+    </clipPath>
+    <filter id="wash-shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#062946" flood-opacity="0.22"/>
+    </filter>
+    <filter id="wash-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
   </defs>
 
-  <!-- Base Shadow -->
-  <ellipse cx="340" cy="460" rx="140" ry="12" fill="#173b67" opacity="0.1"/>
+  <g opacity="0.42" fill="none" stroke="#17c9d6">
+    <circle cx="131" cy="124" r="17" stroke-width="4"/>
+    <circle cx="102" cy="197" r="9" stroke-width="3"/>
+    <circle cx="542" cy="154" r="13" stroke-width="4"/>
+    <circle cx="568" cy="96" r="7" stroke-width="3"/>
+    <circle cx="547" cy="368" r="19" stroke-width="4"/>
+  </g>
 
-  <!-- Main Body -->
-  <rect x="200" y="70" width="280" height="370" rx="28" fill="url(#wm-bg)" stroke="#173b67" stroke-width="12"/>
+  <ellipse cx="342" cy="468" rx="171" ry="25" fill="#082f52" opacity="0.13"/>
+  <ellipse cx="328" cy="421" rx="128" ry="33" fill="#20cbe0" opacity="0.15" filter="url(#wash-glow)"/>
 
-  <!-- Control Panel Divider -->
-  <line x1="200" y1="160" x2="480" y2="160" stroke="#173b67" stroke-width="8"/>
+  <g filter="url(#wash-shadow)">
+    <path d="M455 59 500 82v323l-45 38z" fill="url(#wash-side)" stroke="#153e68" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="174" y="52" width="291" height="392" rx="25" fill="url(#wash-case)" stroke="#153e68" stroke-width="9"/>
+    <path d="M179 76c0-11 9-20 20-20h241c11 0 20 9 20 20v87H179z" fill="url(#wash-panel)"/>
+    <path d="M179 162h281" stroke="#153e68" stroke-width="9"/>
 
-  <!-- Panel Controls -->
-  <circle cx="250" cy="115" r="14" fill="#ff5138"/>
-  <rect x="290" y="103" width="70" height="24" rx="6" fill="#173b67"/>
-  <rect x="300" y="111" width="30" height="8" rx="2" fill="#1db8d4"/>
-  <circle cx="420" cy="115" r="18" fill="#ffffff" stroke="#173b67" stroke-width="6"/>
-  <line x1="420" y1="115" x2="420" y2="103" stroke="#ff5138" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="219" cy="108" r="13" fill="#ef4b33" stroke="#ffffff" stroke-width="5"/>
+    <rect x="250" y="87" width="94" height="42" rx="8" fill="#071c31" stroke="#6adfeb" stroke-width="4"/>
+    <rect x="264" y="99" width="52" height="8" rx="4" fill="#24d2e2"/>
+    <rect x="264" y="113" width="32" height="5" rx="2.5" fill="#ffffff" opacity="0.55"/>
+    <circle cx="406" cy="108" r="24" fill="#f8fcff" stroke="#9fc1d3" stroke-width="5"/>
+    <path d="M406 108V91M406 108l13 8" fill="none" stroke="#153e68" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="406" cy="108" r="5" fill="#ef4b33"/>
 
-  <!-- Door Outer Ring -->
-  <circle cx="340" cy="305" r="105" fill="none" stroke="url(#wm-door)" stroke-width="18"/>
-  <circle cx="340" cy="305" r="95" fill="#173b67" opacity="0.05"/>
+    <circle cx="329" cy="307" r="127" fill="url(#wash-metal)" stroke="#153e68" stroke-width="8"/>
+    <circle cx="329" cy="307" r="110" fill="#092f53" stroke="#ffffff" stroke-width="6"/>
+    <circle cx="329" cy="307" r="102" fill="url(#wash-glass)"/>
 
-  <!-- Door Glass Inner -->
-  <circle cx="340" cy="305" r="86" fill="#ffffff" stroke="#173b67" stroke-width="6"/>
+    <g clip-path="url(#wash-drum-clip)">
+      <path d="M213 325c31-28 60 17 91-7 33-26 63 20 99-4 23-16 40-5 48 5v105H204z" fill="url(#wash-water)"/>
+      <path d="M208 333c32-28 61 16 94-8 34-25 65 18 101-4 20-13 37-6 48 5" fill="none" stroke="#c6fbff" stroke-width="8" stroke-linecap="round"/>
+      <path d="M242 244c27-29 70-43 109-32" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.52"/>
+      <circle cx="273" cy="289" r="11" fill="#e9ffff" opacity="0.92"/>
+      <circle cx="305" cy="262" r="7" fill="#e9ffff" opacity="0.82"/>
+      <circle cx="361" cy="282" r="13" fill="#e9ffff" opacity="0.74"/>
+      <circle cx="387" cy="312" r="6" fill="#ffffff" opacity="0.8"/>
+    </g>
 
-  <!-- Water inside Drum -->
-  <path d="M258 320 C 280 300, 310 330, 340 315 C 370 300, 400 330, 422 320 L 422 375 A 86 86 0 0 1 258 375 Z" fill="url(#wm-water)"/>
+    <path d="M238 273c17-45 62-74 108-70" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.56"/>
+    <rect x="210" y="414" width="55" height="11" rx="5.5" fill="#153e68" opacity="0.85"/>
+    <rect x="393" y="414" width="37" height="11" rx="5.5" fill="#153e68" opacity="0.85"/>
+  </g>
 
-  <!-- Bubbles -->
-  <circle cx="300" cy="275" r="8" fill="#1db8d4" opacity="0.6"/>
-  <circle cx="365" cy="265" r="12" fill="#7ed4ff" opacity="0.7"/>
-  <circle cx="385" cy="290" r="6" fill="#1db8d4" opacity="0.5"/>
-
-  <!-- Shiny Glass Reflection -->
-  <path d="M280 250 A 80 80 0 0 1 380 240 A 86 86 0 0 0 280 250 Z" fill="#ffffff" opacity="0.8"/>
+  <g transform="translate(111 344)">
+    <path d="M16 28h79l-9 78H25z" fill="#ffffff" stroke="#153e68" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M9 28h94" stroke="#153e68" stroke-width="8" stroke-linecap="round"/>
+    <path d="M31 28c3-22 14-33 25-33s22 11 25 33" fill="none" stroke="#153e68" stroke-width="7"/>
+    <path d="M34 55h50M31 74h51M29 92h50" stroke="#17c9d6" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  </g>
 </svg>
