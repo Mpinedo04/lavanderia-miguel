@@ -573,15 +573,7 @@ h3 {
   position: relative;
   padding: 120px 0;
   overflow: hidden;
-  background:
-    linear-gradient(
-      180deg,
-      #061b2d 0,
-      #6d9aab 46px,
-      #d9f0f2 98px,
-      var(--white) 180px,
-      var(--white) 100%
-    );
+  background: var(--white);
 }
 
 .prices::before {
@@ -728,14 +720,7 @@ h3 {
   padding: 120px 0 130px;
   overflow: hidden;
   background:
-    linear-gradient(
-      180deg,
-      var(--white) 0,
-      #edf7fa 150px,
-      #eaf6f8 68%,
-      var(--paper) 88%,
-      var(--white) 100%
-    );
+    linear-gradient(180deg, var(--paper) 0%, #edf7fa 62%, var(--paper) 100%);
 }
 
 .services::before,
@@ -1244,17 +1229,9 @@ h3 {
 /* Steps */
 .steps {
   position: relative;
-  padding: 190px 0 130px;
+  padding: 120px 0 130px;
   color: var(--white);
-  background:
-    linear-gradient(
-      180deg,
-      var(--white) 0,
-      #d7dce0 44px,
-      #687682 100px,
-      var(--ink) 180px,
-      var(--ink) 100%
-    );
+  background: var(--ink);
 }
 
 .steps .eyebrow {
@@ -1327,16 +1304,9 @@ h3 {
   position: relative;
   min-height: 820px;
   overflow: hidden;
-  padding: 190px 0 130px;
+  padding: 130px 0;
   color: var(--white);
   background:
-    linear-gradient(
-      180deg,
-      var(--ink) 0,
-      #063f67 70px,
-      #006fb5 155px,
-      transparent 240px
-    ),
     linear-gradient(115deg, #006bb2 0%, #008ad1 55%, #15b9d2 100%);
 }
 
@@ -1451,16 +1421,8 @@ h3 {
 
 /* Visit */
 .visit {
-  padding: 210px 0 130px;
-  background:
-    linear-gradient(
-      180deg,
-      #15b9d2 0,
-      #8edfe5 72px,
-      #d8f4f3 140px,
-      var(--white) 225px,
-      var(--white) 100%
-    );
+  padding: 130px 0;
+  background: var(--white);
 }
 
 .visit-layout {
@@ -1543,17 +1505,9 @@ h3 {
 .contact {
   position: relative;
   overflow: hidden;
-  padding: 190px 0 105px;
+  padding: 105px 0;
   color: var(--white);
-  background:
-    linear-gradient(
-      180deg,
-      var(--white) 0,
-      #c9d7e0 52px,
-      #527898 112px,
-      var(--blue-dark) 185px,
-      var(--blue-dark) 100%
-    );
+  background: var(--blue-dark);
 }
 
 .contact::after {
@@ -1577,7 +1531,7 @@ h3 {
 }
 
 .contact-copy h2 {
-  font-size: clamp(68px, 7.4vw, 100px);
+  font-size: clamp(72px, 9vw, 116px);
   text-transform: uppercase;
 }
 
@@ -1658,10 +1612,9 @@ h3 {
 
 /* Footer */
 .site-footer {
-  padding: 115px 0 26px;
+  padding: 65px 0 26px;
   color: var(--white);
-  background:
-    linear-gradient(180deg, var(--blue-dark) 0, #061624 62px, #050c13 128px, #050c13 100%);
+  background: #050c13;
 }
 
 .footer-layout {
@@ -2088,27 +2041,6 @@ h3 {
     padding-bottom: 95px;
   }
 
-  .prices {
-    padding-top: 160px;
-  }
-
-  .steps,
-  .posters {
-    padding-top: 170px;
-  }
-
-  .visit {
-    padding-top: 185px;
-  }
-
-  .contact {
-    padding-top: 180px;
-  }
-
-  .site-footer {
-    padding-top: 100px;
-  }
-
   .split-heading {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -2321,19 +2253,6 @@ h3 {
     padding-bottom: 80px;
   }
 
-  .prices {
-    padding-top: 155px;
-  }
-
-  .steps,
-  .posters {
-    padding-top: 165px;
-  }
-
-  .visit {
-    padding-top: 180px;
-  }
-
   .split-heading > p,
   .local-copy > p:not(.eyebrow),
   .visit-copy > p:not(.eyebrow) {
@@ -2482,11 +2401,7 @@ h3 {
   }
 
   .contact {
-    padding: 175px 0 92px;
-  }
-
-  .site-footer {
-    padding-top: 94px;
+    padding: 76px 0 92px;
   }
 
   .contact-copy h2 {
