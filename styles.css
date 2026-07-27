@@ -1531,7 +1531,7 @@ h3 {
 }
 
 .contact-copy h2 {
-  font-size: clamp(72px, 9vw, 116px);
+  font-size: clamp(64px, 7vw, 96px);
   text-transform: uppercase;
 }
 
@@ -2404,7 +2404,7 @@ h3 {
   }
 
   .contact-copy h2 {
-    font-size: 82px;
+    font-size: 72px;
   }
 
   .contact-form {
