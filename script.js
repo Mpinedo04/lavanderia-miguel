@@ -97,28 +97,48 @@ lightboxButtons.forEach((button) => {
 
 if (galleryMore && galleryMoreToggle && renovationGallery) {
   let galleryPinned = false;
+  let hoverSuppressed = false;
   const galleryLabel = galleryMoreToggle.querySelector("span");
 
   const setGalleryState = (isOpen) => {
     galleryMore.classList.toggle("is-open", isOpen);
     galleryMoreToggle.setAttribute("aria-expanded", String(isOpen));
     renovationGallery.toggleAttribute("inert", !isOpen);
-    if (galleryLabel) galleryLabel.textContent = isOpen && galleryPinned ? "Ocultar fotos" : "Ver más fotos";
+    if (galleryLabel) galleryLabel.textContent = isOpen ? "Ocultar fotos" : "Ver más fotos";
   };
 
   galleryMore.addEventListener("pointerenter", (event) => {
-    if (event.pointerType === "mouse" && !galleryPinned) setGalleryState(true);
+    if (event.pointerType === "mouse" && !galleryPinned && !hoverSuppressed) setGalleryState(true);
   });
 
   galleryMore.addEventListener("pointerleave", (event) => {
-    if (event.pointerType === "mouse" && !galleryPinned && !galleryMore.contains(document.activeElement)) {
-      setGalleryState(false);
+    if (event.pointerType === "mouse") {
+      hoverSuppressed = false;
+      if (!galleryPinned && !galleryMore.contains(document.activeElement)) setGalleryState(false);
     }
   });
 
   galleryMoreToggle.addEventListener("click", () => {
-    galleryPinned = !galleryPinned;
-    setGalleryState(galleryPinned);
+    const isOpen = galleryMore.classList.contains("is-open");
+
+    if (isOpen) {
+      galleryPinned = false;
+      hoverSuppressed = true;
+      setGalleryState(false);
+      return;
+    }
+
+    galleryPinned = true;
+    hoverSuppressed = false;
+    setGalleryState(true);
+  });
+
+  renovationGallery.querySelectorAll("[data-lightbox-src]").forEach((button) => {
+    button.addEventListener("click", () => {
+      galleryPinned = true;
+      hoverSuppressed = false;
+      setGalleryState(true);
+    });
   });
 }
 
