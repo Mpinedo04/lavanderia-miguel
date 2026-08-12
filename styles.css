@@ -431,7 +431,7 @@ h3 {
 
 .hero-media img {
   object-fit: cover;
-  object-position: center center;
+  object-position: 54% center;
   transform: scale(1.01);
 }
 
@@ -1106,7 +1106,8 @@ h3 {
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   grid-template-areas:
     "main copy"
-    "detail-one detail-two";
+    "detail-one detail-two"
+    "gallery gallery";
   gap: 34px 54px;
   align-items: start;
 }
@@ -1211,6 +1212,31 @@ h3 {
 }
 
 .local-detail:hover img {
+  transform: scale(1.04);
+}
+
+.renovation-gallery {
+  display: grid;
+  grid-area: gallery;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.renovation-gallery figure {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #dce6ec;
+}
+
+.renovation-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.renovation-gallery figure:hover img {
   transform: scale(1.04);
 }
 
@@ -2099,7 +2125,8 @@ h3 {
     grid-template-areas:
       "copy copy"
       "main main"
-      "detail-one detail-two";
+      "detail-one detail-two"
+      "gallery gallery";
     gap: 24px;
   }
 
@@ -2319,8 +2346,18 @@ h3 {
     grid-template-areas:
       "copy copy"
       "main main"
-      "detail-one detail-two";
+      "detail-one detail-two"
+      "gallery gallery";
     gap: 12px;
+  }
+
+  .renovation-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .renovation-gallery figure:last-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 1.8 / 1;
   }
 
   .local-main-image {
