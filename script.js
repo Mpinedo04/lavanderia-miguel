@@ -7,6 +7,10 @@ const contactForm = document.querySelector(".contact-form");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox img");
 const lightboxClose = document.querySelector(".lightbox-close");
+const lightboxStage = document.querySelector(".lightbox-stage");
+const lightboxPrevious = document.querySelector(".lightbox-prev");
+const lightboxNext = document.querySelector(".lightbox-next");
+const lightboxCounter = document.querySelector(".lightbox-counter");
 const lightboxButtons = document.querySelectorAll("[data-lightbox-src]");
 const galleryMore = document.querySelector("[data-gallery-more]");
 const galleryMoreToggle = document.querySelector(".gallery-more-toggle");
@@ -16,6 +20,9 @@ const revealTargets = document.querySelectorAll(
 );
 
 const WHATSAPP_NUMBER = "34670607756";
+let activeLightboxItems = [];
+let activeLightboxIndex = 0;
+let swipeStartX = null;
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -83,17 +90,52 @@ const closeLightbox = () => {
   document.body.classList.remove("lightbox-open");
 };
 
+const showLightboxItem = (index) => {
+  if (!lightboxImage || !activeLightboxItems.length) return;
+  activeLightboxIndex = (index + activeLightboxItems.length) % activeLightboxItems.length;
+  const item = activeLightboxItems[activeLightboxIndex];
+  lightboxImage.src = item.dataset.lightboxSrc || "";
+  lightboxImage.alt = item.dataset.lightboxAlt || "";
+  if (lightboxCounter) lightboxCounter.textContent = `${activeLightboxIndex + 1} / ${activeLightboxItems.length}`;
+};
+
+const moveLightbox = (direction) => {
+  if (activeLightboxItems.length < 2) return;
+  showLightboxItem(activeLightboxIndex + direction);
+};
+
 lightboxButtons.forEach((button) => {
   button.addEventListener("click", () => {
     if (!lightbox || !lightboxImage) return;
-    lightboxImage.src = button.dataset.lightboxSrc || "";
-    lightboxImage.alt = button.dataset.lightboxAlt || "";
+    const group = button.dataset.lightboxGroup;
+    activeLightboxItems = group
+      ? [...document.querySelectorAll(`[data-lightbox-group="${group}"]`)]
+      : [button];
+    activeLightboxIndex = Math.max(0, activeLightboxItems.indexOf(button));
+    lightbox.classList.toggle("has-gallery", activeLightboxItems.length > 1);
+    showLightboxItem(activeLightboxIndex);
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
     document.body.classList.add("lightbox-open");
     lightboxClose?.focus();
   });
 });
+
+lightboxPrevious?.addEventListener("click", () => moveLightbox(-1));
+lightboxNext?.addEventListener("click", () => moveLightbox(1));
+
+lightboxStage?.addEventListener("touchstart", (event) => {
+  swipeStartX = event.changedTouches[0]?.clientX ?? null;
+}, { passive: true });
+
+lightboxStage?.addEventListener("touchend", (event) => {
+  if (swipeStartX === null) return;
+  const swipeEndX = event.changedTouches[0]?.clientX ?? swipeStartX;
+  const distance = swipeEndX - swipeStartX;
+  swipeStartX = null;
+  if (Math.abs(distance) < 45) return;
+  moveLightbox(distance < 0 ? 1 : -1);
+}, { passive: true });
 
 if (galleryMore && galleryMoreToggle && renovationGallery) {
   let galleryPinned = false;
@@ -148,6 +190,8 @@ lightbox?.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  if (lightbox?.classList.contains("is-open") && event.key === "ArrowLeft") moveLightbox(-1);
+  if (lightbox?.classList.contains("is-open") && event.key === "ArrowRight") moveLightbox(1);
   if (event.key === "Escape") {
     closeLightbox();
     setMenuState(false);

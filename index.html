@@ -278,6 +278,7 @@
               aria-label="Ampliar foto de las secadoras y la zona de apoyo"
               data-lightbox-src="assets/real/reforma-secadoras-espera.webp"
               data-lightbox-alt="Secadoras y zona de apoyo del local reformado"
+              data-lightbox-group="local"
             >
               <img
                 src="assets/real/reforma-secadoras-espera.webp"
@@ -294,6 +295,7 @@
               aria-label="Ampliar foto de la zona climatizada de espera"
               data-lightbox-src="assets/real/reforma-zona-espera-frontal.webp"
               data-lightbox-alt="Zona climatizada de espera del local reformado"
+              data-lightbox-group="local"
             >
               <img
                 src="assets/real/reforma-zona-espera-frontal.webp"
@@ -312,16 +314,16 @@
             </button>
             <div class="gallery-panel">
               <div class="renovation-gallery" id="renovation-gallery" aria-label="Más fotos del local reformado" inert>
-                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la fila de lavadoras" data-lightbox-src="assets/real/reforma-lavadoras.webp" data-lightbox-alt="Fila de lavadoras del local reformado">
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la fila de lavadoras" data-lightbox-src="assets/real/reforma-lavadoras.webp" data-lightbox-alt="Fila de lavadoras del local reformado" data-lightbox-group="local">
                   <img src="assets/real/reforma-lavadoras.webp" alt="Fila de lavadoras del local reformado" width="1800" height="1350" loading="lazy" />
                 </button>
-                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera junto a la entrada" data-lightbox-src="assets/real/reforma-entrada-espera.webp" data-lightbox-alt="Zona de espera junto a la entrada">
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera junto a la entrada" data-lightbox-src="assets/real/reforma-entrada-espera.webp" data-lightbox-alt="Zona de espera junto a la entrada" data-lightbox-group="local">
                   <img src="assets/real/reforma-entrada-espera.webp" alt="Zona de espera junto a la entrada" width="1800" height="1350" loading="lazy" />
                 </button>
-                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la entrada" data-lightbox-src="assets/real/reforma-entrada.webp" data-lightbox-alt="Entrada luminosa de Rayo Washing">
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la entrada" data-lightbox-src="assets/real/reforma-entrada.webp" data-lightbox-alt="Entrada luminosa de Rayo Washing" data-lightbox-group="local">
                   <img src="assets/real/reforma-entrada.webp" alt="Entrada luminosa de Rayo Washing" width="1800" height="1350" loading="lazy" />
                 </button>
-                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera" data-lightbox-src="assets/real/reforma-zona-espera.webp" data-lightbox-alt="Mesa, banco y aire acondicionado del local">
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera" data-lightbox-src="assets/real/reforma-zona-espera.webp" data-lightbox-alt="Mesa, banco y aire acondicionado del local" data-lightbox-group="local">
                   <img src="assets/real/reforma-zona-espera.webp" alt="Mesa, banco y aire acondicionado del local" width="1800" height="1350" loading="lazy" />
                 </button>
               </div>
@@ -550,9 +552,14 @@
 
     <div class="lightbox" aria-hidden="true">
       <button class="lightbox-close" type="button" aria-label="Cerrar imagen ampliada">Cerrar</button>
-      <img alt="" />
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Ver imagen anterior"></button>
+      <div class="lightbox-stage">
+        <img alt="" />
+        <span class="lightbox-counter" aria-live="polite"></span>
+      </div>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Ver imagen siguiente"></button>
     </div>
 
-    <script src="script.js?v=25"></script>
+    <script src="script.js?v=26"></script>
   </body>
 </html>
