@@ -22,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=23" />
+    <link rel="stylesheet" href="styles.css?v=24" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -271,8 +271,14 @@
             </ul>
           </div>
 
-          <figure class="local-detail detail-one">
-            <picture>
+          <div class="featured-gallery" aria-label="Fotos destacadas del local reformado">
+            <button
+              class="local-detail gallery-zoom"
+              type="button"
+              aria-label="Ampliar foto de las secadoras y la zona de apoyo"
+              data-lightbox-src="assets/real/reforma-secadoras-espera.webp"
+              data-lightbox-alt="Secadoras y zona de apoyo del local reformado"
+            >
               <img
                 src="assets/real/reforma-secadoras-espera.webp"
                 alt="Secadoras y zona de apoyo del local reformado"
@@ -280,11 +286,15 @@
                 height="1350"
                 loading="lazy"
               />
-            </picture>
-          </figure>
+            </button>
 
-          <figure class="local-detail detail-two">
-            <picture>
+            <button
+              class="local-detail gallery-zoom"
+              type="button"
+              aria-label="Ampliar foto de la zona climatizada de espera"
+              data-lightbox-src="assets/real/reforma-zona-espera-frontal.webp"
+              data-lightbox-alt="Zona climatizada de espera del local reformado"
+            >
               <img
                 src="assets/real/reforma-zona-espera-frontal.webp"
                 alt="Zona climatizada de espera del local reformado"
@@ -292,25 +302,33 @@
                 height="1350"
                 loading="lazy"
               />
-            </picture>
-          </figure>
+            </button>
+          </div>
 
-          <div class="renovation-gallery" aria-label="Galería del local reformado">
-            <figure>
-              <img src="assets/real/reforma-lavadoras.webp" alt="Fila de lavadoras del local reformado" width="1800" height="1350" loading="lazy" />
-            </figure>
-            <figure>
-              <img src="assets/real/reforma-lavadoras-frontal.webp" alt="Lavadoras de 10, 15 y 18 kg" width="1800" height="1350" loading="lazy" />
-            </figure>
-            <figure>
-              <img src="assets/real/reforma-entrada-espera.webp" alt="Zona de espera junto a la entrada" width="1800" height="1350" loading="lazy" />
-            </figure>
-            <figure>
-              <img src="assets/real/reforma-entrada.webp" alt="Entrada luminosa de Rayo Washing" width="1800" height="1350" loading="lazy" />
-            </figure>
-            <figure>
-              <img src="assets/real/reforma-zona-espera.webp" alt="Mesa, banco y aire acondicionado del local" width="1800" height="1350" loading="lazy" />
-            </figure>
+          <div class="gallery-more" data-gallery-more>
+            <button class="gallery-more-toggle" type="button" aria-expanded="false" aria-controls="renovation-gallery">
+              <span>Ver más fotos</span>
+              <span class="gallery-more-icon" aria-hidden="true"></span>
+            </button>
+            <div class="gallery-panel">
+              <div class="renovation-gallery" id="renovation-gallery" aria-label="Más fotos del local reformado" inert>
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la fila de lavadoras" data-lightbox-src="assets/real/reforma-lavadoras.webp" data-lightbox-alt="Fila de lavadoras del local reformado">
+                  <img src="assets/real/reforma-lavadoras.webp" alt="Fila de lavadoras del local reformado" width="1800" height="1350" loading="lazy" />
+                </button>
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto frontal de las lavadoras" data-lightbox-src="assets/real/reforma-lavadoras-frontal.webp" data-lightbox-alt="Lavadoras de 10, 15 y 18 kg">
+                  <img src="assets/real/reforma-lavadoras-frontal.webp" alt="Lavadoras de 10, 15 y 18 kg" width="1800" height="1350" loading="lazy" />
+                </button>
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera junto a la entrada" data-lightbox-src="assets/real/reforma-entrada-espera.webp" data-lightbox-alt="Zona de espera junto a la entrada">
+                  <img src="assets/real/reforma-entrada-espera.webp" alt="Zona de espera junto a la entrada" width="1800" height="1350" loading="lazy" />
+                </button>
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la entrada" data-lightbox-src="assets/real/reforma-entrada.webp" data-lightbox-alt="Entrada luminosa de Rayo Washing">
+                  <img src="assets/real/reforma-entrada.webp" alt="Entrada luminosa de Rayo Washing" width="1800" height="1350" loading="lazy" />
+                </button>
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera" data-lightbox-src="assets/real/reforma-zona-espera.webp" data-lightbox-alt="Mesa, banco y aire acondicionado del local">
+                  <img src="assets/real/reforma-zona-espera.webp" alt="Mesa, banco y aire acondicionado del local" width="1800" height="1350" loading="lazy" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -534,10 +552,10 @@
     </a>
 
     <div class="lightbox" aria-hidden="true">
-      <button class="lightbox-close" type="button" aria-label="Cerrar cartel ampliado">Cerrar</button>
+      <button class="lightbox-close" type="button" aria-label="Cerrar imagen ampliada">Cerrar</button>
       <img alt="" />
     </div>
 
-    <script src="script.js?v=23"></script>
+    <script src="script.js?v=24"></script>
   </body>
 </html>

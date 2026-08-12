@@ -7,7 +7,10 @@ const contactForm = document.querySelector(".contact-form");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox img");
 const lightboxClose = document.querySelector(".lightbox-close");
-const posterButtons = document.querySelectorAll(".poster-zoom");
+const lightboxButtons = document.querySelectorAll("[data-lightbox-src]");
+const galleryMore = document.querySelector("[data-gallery-more]");
+const galleryMoreToggle = document.querySelector(".gallery-more-toggle");
+const renovationGallery = document.querySelector("#renovation-gallery");
 const revealTargets = document.querySelectorAll(
   ".prices .section-intro, .price-board, .dryer-offer, .services .section-intro, .service-grid, .local-main-image, .local-copy, .local-detail, .steps .section-intro, .step-track, .poster-copy, .poster-card, .visit-copy, .map-frame, .contact-copy, .contact-form"
 );
@@ -80,7 +83,7 @@ const closeLightbox = () => {
   document.body.classList.remove("lightbox-open");
 };
 
-posterButtons.forEach((button) => {
+lightboxButtons.forEach((button) => {
   button.addEventListener("click", () => {
     if (!lightbox || !lightboxImage) return;
     lightboxImage.src = button.dataset.lightboxSrc || "";
@@ -91,6 +94,33 @@ posterButtons.forEach((button) => {
     lightboxClose?.focus();
   });
 });
+
+if (galleryMore && galleryMoreToggle && renovationGallery) {
+  let galleryPinned = false;
+  const galleryLabel = galleryMoreToggle.querySelector("span");
+
+  const setGalleryState = (isOpen) => {
+    galleryMore.classList.toggle("is-open", isOpen);
+    galleryMoreToggle.setAttribute("aria-expanded", String(isOpen));
+    renovationGallery.toggleAttribute("inert", !isOpen);
+    if (galleryLabel) galleryLabel.textContent = isOpen && galleryPinned ? "Ocultar fotos" : "Ver más fotos";
+  };
+
+  galleryMore.addEventListener("pointerenter", (event) => {
+    if (event.pointerType === "mouse" && !galleryPinned) setGalleryState(true);
+  });
+
+  galleryMore.addEventListener("pointerleave", (event) => {
+    if (event.pointerType === "mouse" && !galleryPinned && !galleryMore.contains(document.activeElement)) {
+      setGalleryState(false);
+    }
+  });
+
+  galleryMoreToggle.addEventListener("click", () => {
+    galleryPinned = !galleryPinned;
+    setGalleryState(galleryPinned);
+  });
+}
 
 lightboxClose?.addEventListener("click", closeLightbox);
 lightbox?.addEventListener("click", (event) => {
