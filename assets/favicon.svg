@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="rw-title rw-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="rw-title">Rayo Washing</title>
+  <desc id="rw-desc">Rayo amarillo y rojo sobre ondas de agua azules</desc>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M9 45c11-9 22 9 34 0s23 9 35 0" stroke="#09141F" stroke-width="13"/>
+    <path d="M9 45c11-9 22 9 34 0s23 9 35 0" stroke="#16C7D5" stroke-width="7"/>
+
+    <path d="M7 68c12-10 24 10 37 0s25 10 38 0" stroke="#09141F" stroke-width="13"/>
+    <path d="M7 68c12-10 24 10 37 0s25 10 38 0" stroke="#0877B9" stroke-width="7"/>
+
+    <path d="M12 91c10-8 21 8 32 0s22 8 34 0" stroke="#09141F" stroke-width="13"/>
+    <path d="M12 91c10-8 21 8 32 0s22 8 34 0" stroke="#16C7D5" stroke-width="7"/>
+  </g>
+
+  <path d="M88 5 42 67h28l-18 57 68-76H87l22-43H88Z" fill="#FF4D35" stroke="#FFFFFF" stroke-width="12" stroke-linejoin="miter"/>
+  <path d="M88 5 42 67h28l-18 57 68-76H87l22-43H88Z" fill="#FF4D35" stroke="#09141F" stroke-width="6" stroke-linejoin="miter"/>
+  <path d="M87 10 52 60h27l-15 43 43-49H78l21-44H87Z" fill="#FFE20A" stroke="#09141F" stroke-width="4" stroke-linejoin="miter"/>
+  <path d="M87 25 66 55h17" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"/>
+</svg>

@@ -19,14 +19,15 @@
     <meta property="og:image:alt" content="Interior reformado de la lavandería Rayo Washing en Abrera" />
     <title>Rayo Washing | Lavandería autoservicio en Abrera</title>
     <link rel="canonical" href="https://lavanderia-miguel.vercel.app/" />
-    <link rel="icon" href="assets/favicon.png" />
+    <link rel="icon" href="assets/favicon.png" sizes="32x32" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=24" />
+    <link rel="stylesheet" href="styles.css?v=25" />
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -64,10 +65,10 @@
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
 
     <header class="site-header" id="inicio">
-      <a class="brand" href="#inicio" aria-label="Rayo Washing, volver al inicio">
+      <a class="brand" href="#inicio" aria-label="Rayo Washing, volver al inicio" data-i18n-aria="brand.aria">
         <span class="brand-mark" aria-hidden="true">
           <img src="assets/icons/rayo-washing-brand-mark.svg?v=3" alt="" width="128" height="128" />
         </span>
@@ -83,13 +84,18 @@
         <span></span>
       </button>
 
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="#precios">Precios</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#el-local">El local</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#ubicacion">Ubicación</a>
+      <nav class="main-nav" aria-label="Navegación principal" data-i18n-aria="nav.aria">
+        <a href="#precios" data-i18n="nav.prices">Precios</a>
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#el-local" data-i18n="nav.local">El local</a>
+        <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
+        <a href="#ubicacion" data-i18n="nav.location">Ubicación</a>
       </nav>
+
+      <div class="lang-switch" role="group" aria-label="Cambio de idioma" data-i18n-aria="lang.aria">
+        <button class="lang-btn is-active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
 
       <a class="header-cta" href="https://wa.me/34670607756" target="_blank" rel="noopener noreferrer">
         WhatsApp
@@ -113,38 +119,38 @@
 
         <div class="section-shell hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow eyebrow-light">Lavandería autoservicio en Abrera</p>
+            <p class="eyebrow eyebrow-light" data-i18n="hero.eyebrow">Lavandería autoservicio en Abrera</p>
             <h1 id="hero-title">Rayo<br />Washing</h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
               Lava y seca tu colada con máquinas de gran capacidad, precios claros y un espacio climatizado.
             </p>
-            <div class="hero-actions" aria-label="Acciones principales">
-              <a class="btn btn-bolt" href="#precios">Ver precios</a>
-              <a class="btn btn-ghost" href="#ubicacion">Cómo llegar</a>
+            <div class="hero-actions" aria-label="Acciones principales" data-i18n-aria="hero.actionsAria">
+              <a class="btn btn-bolt" href="#precios" data-i18n="hero.ctaPrices">Ver precios</a>
+              <a class="btn btn-ghost" href="#ubicacion" data-i18n="hero.ctaDirections">Cómo llegar</a>
             </div>
           </div>
 
-          <div class="hero-status" aria-label="Información del establecimiento">
+          <div class="hero-status" aria-label="Información del establecimiento" data-i18n-aria="hero.statusAria">
             <div>
-              <span>Horario</span>
+              <span data-i18n="hero.hours">Horario</span>
               <strong>8:00 — 22:00</strong>
-              <small>Todos los días</small>
+              <small data-i18n="hero.everyday">Todos los días</small>
             </div>
             <div>
-              <span>Estamos en</span>
+              <span data-i18n="hero.findUs">Estamos en</span>
               <strong>Passeig de l'Estació, 21</strong>
               <small>08630 Abrera, Barcelona</small>
             </div>
             <a href="tel:+34670607756">
-              <span>Teléfono</span>
+              <span data-i18n="hero.phone">Teléfono</span>
               <strong>670 607 756</strong>
-              <small>Llamar ahora</small>
+              <small data-i18n="hero.callNow">Llamar ahora</small>
             </a>
           </div>
         </div>
 
-        <a class="hero-scroll" href="#precios" aria-label="Bajar a los precios">
-          <span>Descubre el local</span>
+        <a class="hero-scroll" href="#precios" aria-label="Bajar a los precios" data-i18n-aria="hero.scrollAria">
+          <span data-i18n="hero.scroll">Descubre el local</span>
           <i aria-hidden="true"></i>
         </a>
       </section>
@@ -153,10 +159,10 @@
         <div class="section-shell">
           <div class="section-intro split-heading">
             <div>
-              <p class="eyebrow">Tarifas sin sorpresas</p>
-              <h2 id="prices-title">Elige el tamaño.<br />Nosotros ponemos el jabón.</h2>
+              <p class="eyebrow" data-i18n="prices.eyebrow">Tarifas sin sorpresas</p>
+              <h2 id="prices-title" data-i18n-html="prices.title">Elige el tamaño.<br />Nosotros ponemos el jabón.</h2>
             </div>
-            <p>
+            <p data-i18n="prices.intro">
               Todos los lavados incluyen jabón y suavizante. La lavadora de 15 kg utiliza agua ozonizada para una
               desinfección más completa.
             </p>
@@ -166,47 +172,47 @@
             <article class="price-line">
               <div class="price-number">01</div>
               <div>
-                <span>Lavado diario</span>
-                <h3>Lavadora 10 kg</h3>
+                <span data-i18n="prices.w1tag">Lavado diario</span>
+                <h3 data-i18n="prices.w1">Lavadora 10 kg</h3>
               </div>
-              <p>Ropa del día a día</p>
+              <p data-i18n="prices.w1desc">Ropa del día a día</p>
               <strong>4€</strong>
             </article>
             <article class="price-line accent">
               <div class="price-number">02</div>
               <div>
-                <span>Agua ozonizada</span>
-                <h3>Lavadora 15 kg</h3>
+                <span data-i18n="prices.w2tag">Agua ozonizada</span>
+                <h3 data-i18n="prices.w2">Lavadora 15 kg</h3>
               </div>
-              <p>Mantas y cargas medias</p>
+              <p data-i18n="prices.w2desc">Mantas y cargas medias</p>
               <strong>6€</strong>
             </article>
             <article class="price-line">
               <div class="price-number">03</div>
               <div>
-                <span>Gran capacidad</span>
-                <h3>Lavadora 18 kg</h3>
+                <span data-i18n="prices.w3tag">Gran capacidad</span>
+                <h3 data-i18n="prices.w3">Lavadora 18 kg</h3>
               </div>
-              <p>Edredones y cargas grandes</p>
+              <p data-i18n="prices.w3desc">Edredones y cargas grandes</p>
               <strong>8€</strong>
             </article>
             <article class="price-line pet">
               <div class="price-number">04</div>
               <div>
-                <span>Uso exclusivo</span>
-                <h3>Mascotas 10 kg</h3>
+                <span data-i18n="prices.w4tag">Uso exclusivo</span>
+                <h3 data-i18n="prices.w4">Mascotas 10 kg</h3>
               </div>
-              <p>Mantas, camas y toallas</p>
+              <p data-i18n="prices.w4desc">Mantas, camas y toallas</p>
               <strong>4€</strong>
             </article>
           </div>
 
           <div class="dryer-offer">
             <div>
-              <span>Secadora de 17 kg</span>
-              <strong>Seca más. Espera menos.</strong>
+              <span data-i18n="prices.dryerTag">Secadora de 17 kg</span>
+              <strong data-i18n="prices.dryerTitle">Seca más. Espera menos.</strong>
             </div>
-            <p><b>1€</b> / 15 minutos</p>
+            <p data-i18n-html="prices.dryerPrice"><b>1€</b> / 15 minutos</p>
           </div>
         </div>
       </section>
@@ -214,8 +220,8 @@
       <section class="services" id="servicios" aria-labelledby="services-title">
         <div class="section-shell">
           <div class="section-intro centered-heading">
-            <p class="eyebrow">Tres zonas, una colada resuelta</p>
-            <h2 id="services-title">Todo lo que necesitas,<br />sin complicaciones</h2>
+            <p class="eyebrow" data-i18n="services.eyebrow">Tres zonas, una colada resuelta</p>
+            <h2 id="services-title" data-i18n-html="services.title">Todo lo que necesitas,<br />sin complicaciones</h2>
           </div>
 
           <div class="service-grid">
@@ -225,8 +231,8 @@
                 <img src="assets/icons/washing-machine.svg?v=2" alt="" width="680" height="520" loading="lazy" />
               </div>
               <div>
-                <h3>Lavado autoservicio</h3>
-                <p>Máquinas de 10, 15 y 18 kg para ropa diaria, mantas y edredones.</p>
+                <h3 data-i18n="services.s1title">Lavado autoservicio</h3>
+                <p data-i18n="services.s1desc">Máquinas de 10, 15 y 18 kg para ropa diaria, mantas y edredones.</p>
               </div>
             </article>
             <article class="service-card service-dark">
@@ -235,8 +241,8 @@
                 <img src="assets/icons/dryer.svg?v=2" alt="" width="680" height="520" loading="lazy" />
               </div>
               <div>
-                <h3>Secado rápido</h3>
-                <p>Secadoras de 17 kg para terminar la colada sin depender del tiempo.</p>
+                <h3 data-i18n="services.s2title">Secado rápido</h3>
+                <p data-i18n="services.s2desc">Secadoras de 17 kg para terminar la colada sin depender del tiempo.</p>
               </div>
             </article>
             <article class="service-card service-pet">
@@ -245,8 +251,8 @@
                 <img src="assets/icons/pet-washer.svg?v=2" alt="" width="680" height="520" loading="lazy" />
               </div>
               <div>
-                <h3>Textiles de mascotas</h3>
-                <p>Lavadora exclusiva para sus mantas, camas, toallas y accesorios.</p>
+                <h3 data-i18n="services.s3title">Textiles de mascotas</h3>
+                <p data-i18n="services.s3desc">Lavadora exclusiva para sus mantas, camas, toallas y accesorios.</p>
               </div>
             </article>
           </div>
@@ -260,41 +266,45 @@
               <img
                 src="assets/real/reforma-maquinas-completa.webp"
                 alt="Interior reformado de Rayo Washing con lavadoras y secadoras"
+                data-i18n-alt="local.imgAlt"
                 width="1800"
                 height="1350"
                 loading="lazy"
               />
             </picture>
-            <span>Local reformado</span>
+            <span data-i18n="local.tag">Local reformado</span>
           </div>
 
           <div class="local-copy">
-            <p class="eyebrow">Hecho para el día a día</p>
-            <h2 id="local-title">Un espacio limpio, claro y climatizado.</h2>
-            <p>
+            <p class="eyebrow" data-i18n="local.eyebrow">Hecho para el día a día</p>
+            <h2 id="local-title" data-i18n="local.title">Un espacio limpio, claro y climatizado.</h2>
+            <p data-i18n="local.text">
               Un interior renovado con máquinas visibles, superficies de apoyo y espacio suficiente para organizar la
               colada con tranquilidad. Todo pensado para entrar, lavar y seguir con tu día.
             </p>
             <ul class="feature-list">
-              <li>Local climatizado</li>
-              <li>Jabón y suavizante incluidos</li>
-              <li>Fácil aparcamiento cerca</li>
-              <li>Máquinas de gran capacidad</li>
+              <li data-i18n="local.f1">Local climatizado</li>
+              <li data-i18n="local.f2">Jabón y suavizante incluidos</li>
+              <li data-i18n="local.f3">Fácil aparcamiento cerca</li>
+              <li data-i18n="local.f4">Máquinas de gran capacidad</li>
             </ul>
           </div>
 
-          <div class="featured-gallery" aria-label="Fotos destacadas del local reformado">
+          <div class="featured-gallery" aria-label="Fotos destacadas del local reformado" data-i18n-aria="local.galleryAria">
             <button
               class="local-detail gallery-zoom"
               type="button"
               aria-label="Ampliar foto de las secadoras y la zona de apoyo"
+              data-i18n-aria="local.dryersAria"
               data-lightbox-src="assets/real/reforma-secadoras-espera.webp"
               data-lightbox-alt="Secadoras y zona de apoyo del local reformado"
+              data-i18n-lbalt="local.dryersAlt"
               data-lightbox-group="local"
             >
               <img
                 src="assets/real/reforma-secadoras-espera.webp"
                 alt="Secadoras y zona de apoyo del local reformado"
+                data-i18n-alt="local.dryersAlt"
                 width="1800"
                 height="1350"
                 loading="lazy"
@@ -305,13 +315,16 @@
               class="local-detail gallery-zoom"
               type="button"
               aria-label="Ampliar foto de la zona climatizada de espera"
+              data-i18n-aria="local.waitAria"
               data-lightbox-src="assets/real/reforma-zona-espera-frontal.webp"
               data-lightbox-alt="Zona climatizada de espera del local reformado"
+              data-i18n-lbalt="local.waitAlt"
               data-lightbox-group="local"
             >
               <img
                 src="assets/real/reforma-zona-espera-frontal.webp"
                 alt="Zona climatizada de espera del local reformado"
+                data-i18n-alt="local.waitAlt"
                 width="1800"
                 height="1350"
                 loading="lazy"
@@ -325,18 +338,18 @@
               <span class="gallery-more-icon" aria-hidden="true"></span>
             </button>
             <div class="gallery-panel">
-              <div class="renovation-gallery" id="renovation-gallery" aria-label="Más fotos del local reformado" inert>
-                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la fila de lavadoras" data-lightbox-src="assets/real/reforma-lavadoras.webp" data-lightbox-alt="Fila de lavadoras del local reformado" data-lightbox-group="local">
-                  <img src="assets/real/reforma-lavadoras.webp" alt="Fila de lavadoras del local reformado" width="1800" height="1350" loading="lazy" />
+              <div class="renovation-gallery" id="renovation-gallery" aria-label="Más fotos del local reformado" data-i18n-aria="local.moreAria" inert>
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la fila de lavadoras" data-i18n-aria="local.rowAria" data-lightbox-src="assets/real/reforma-lavadoras.webp" data-lightbox-alt="Fila de lavadoras del local reformado" data-i18n-lbalt="local.rowAlt" data-lightbox-group="local">
+                  <img src="assets/real/reforma-lavadoras.webp" alt="Fila de lavadoras del local reformado" data-i18n-alt="local.rowAlt" width="1800" height="1350" loading="lazy" />
                 </button>
-                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera junto a la entrada" data-lightbox-src="assets/real/reforma-entrada-espera.webp" data-lightbox-alt="Zona de espera junto a la entrada" data-lightbox-group="local">
-                  <img src="assets/real/reforma-entrada-espera.webp" alt="Zona de espera junto a la entrada" width="1800" height="1350" loading="lazy" />
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera junto a la entrada" data-i18n-aria="local.doorWaitAria" data-lightbox-src="assets/real/reforma-entrada-espera.webp" data-lightbox-alt="Zona de espera junto a la entrada" data-i18n-lbalt="local.doorWaitAlt" data-lightbox-group="local">
+                  <img src="assets/real/reforma-entrada-espera.webp" alt="Zona de espera junto a la entrada" data-i18n-alt="local.doorWaitAlt" width="1800" height="1350" loading="lazy" />
                 </button>
-                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la entrada" data-lightbox-src="assets/real/reforma-entrada.webp" data-lightbox-alt="Entrada luminosa de Rayo Washing" data-lightbox-group="local">
-                  <img src="assets/real/reforma-entrada.webp" alt="Entrada luminosa de Rayo Washing" width="1800" height="1350" loading="lazy" />
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la entrada" data-i18n-aria="local.doorAria" data-lightbox-src="assets/real/reforma-entrada.webp" data-lightbox-alt="Entrada luminosa de Rayo Washing" data-i18n-lbalt="local.doorAlt" data-lightbox-group="local">
+                  <img src="assets/real/reforma-entrada.webp" alt="Entrada luminosa de Rayo Washing" data-i18n-alt="local.doorAlt" width="1800" height="1350" loading="lazy" />
                 </button>
-                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera" data-lightbox-src="assets/real/reforma-zona-espera.webp" data-lightbox-alt="Mesa, banco y aire acondicionado del local" data-lightbox-group="local">
-                  <img src="assets/real/reforma-zona-espera.webp" alt="Mesa, banco y aire acondicionado del local" width="1800" height="1350" loading="lazy" />
+                <button class="gallery-zoom" type="button" aria-label="Ampliar foto de la zona de espera" data-i18n-aria="local.waitZoneAria" data-lightbox-src="assets/real/reforma-zona-espera.webp" data-lightbox-alt="Mesa, banco y aire acondicionado del local" data-i18n-lbalt="local.waitZoneAlt" data-lightbox-group="local">
+                  <img src="assets/real/reforma-zona-espera.webp" alt="Mesa, banco y aire acondicionado del local" data-i18n-alt="local.waitZoneAlt" width="1800" height="1350" loading="lazy" />
                 </button>
               </div>
             </div>
@@ -348,32 +361,32 @@
         <div class="section-shell">
           <div class="section-intro split-heading">
             <div>
-              <p class="eyebrow">Así de sencillo</p>
-              <h2 id="steps-title">Tu colada lista<br />en cuatro pasos</h2>
+              <p class="eyebrow" data-i18n="steps.eyebrow">Así de sencillo</p>
+              <h2 id="steps-title" data-i18n-html="steps.title">Tu colada lista<br />en cuatro pasos</h2>
             </div>
-            <p>Una experiencia directa, incluso si es la primera vez que utilizas una lavandería autoservicio.</p>
+            <p data-i18n="steps.intro">Una experiencia directa, incluso si es la primera vez que utilizas una lavandería autoservicio.</p>
           </div>
 
           <ol class="step-track">
             <li>
               <span>01</span>
-              <h3>Trae tu colada</h3>
-              <p>Ropa, mantas, edredones o textiles de mascotas.</p>
+              <h3 data-i18n="steps.s1">Trae tu colada</h3>
+              <p data-i18n="steps.s1desc">Ropa, mantas, edredones o textiles de mascotas.</p>
             </li>
             <li>
               <span>02</span>
-              <h3>Elige máquina</h3>
-              <p>Selecciona la capacidad que mejor encaja con tu carga.</p>
+              <h3 data-i18n="steps.s2">Elige máquina</h3>
+              <p data-i18n="steps.s2desc">Selecciona la capacidad que mejor encaja con tu carga.</p>
             </li>
             <li>
               <span>03</span>
-              <h3>Lava y seca</h3>
-              <p>Sigue las indicaciones de la máquina y aprovecha el tiempo.</p>
+              <h3 data-i18n="steps.s3">Lava y seca</h3>
+              <p data-i18n="steps.s3desc">Sigue las indicaciones de la máquina y aprovecha el tiempo.</p>
             </li>
             <li>
               <span>04</span>
-              <h3>Recoge y listo</h3>
-              <p>Tu ropa limpia, seca y preparada para volver a casa.</p>
+              <h3 data-i18n="steps.s4">Recoge y listo</h3>
+              <p data-i18n="steps.s4desc">Tu ropa limpia, seca y preparada para volver a casa.</p>
             </li>
           </ol>
         </div>
@@ -382,13 +395,13 @@
       <section class="posters" id="mascotas" aria-labelledby="posters-title">
         <div class="section-shell poster-layout">
           <div class="poster-copy">
-            <p class="eyebrow eyebrow-light">Información del local</p>
-            <h2 id="posters-title">Lo ves aquí.<br />Lo encuentras allí.</h2>
-            <p>
+            <p class="eyebrow eyebrow-light" data-i18n="posters.eyebrow">Información del local</p>
+            <h2 id="posters-title" data-i18n-html="posters.title">Lo ves aquí.<br />Lo encuentras allí.</h2>
+            <p data-i18n="posters.text">
               Consulta los carteles reales con los precios, el horario y la información de la zona exclusiva para
               textiles de mascotas.
             </p>
-            <a class="text-link" href="#ubicacion">Ver dónde estamos</a>
+            <a class="text-link" href="#ubicacion" data-i18n="posters.link">Ver dónde estamos</a>
           </div>
 
           <figure class="poster-card poster-front">
@@ -397,20 +410,22 @@
               <img
                 src="assets/real/rayo-washing-cartel-precios.jpg"
                 alt="Cartel de Rayo Washing con precios de lavado y servicio para mascotas"
+                data-i18n-alt="posters.priceAlt"
                 width="1748"
                 height="2480"
                 loading="lazy"
               />
             </picture>
             <figcaption>
-              <span>Precios y mascotas</span>
+              <span data-i18n="posters.priceCaption">Precios y mascotas</span>
               <button
                 type="button"
                 class="poster-zoom"
                 data-lightbox-src="assets/real/rayo-washing-cartel-precios.webp"
                 data-lightbox-alt="Cartel de precios de Rayo Washing"
+                data-i18n-lbalt="posters.priceLb"
               >
-                Ampliar
+                <span data-i18n="posters.zoom">Ampliar</span>
               </button>
             </figcaption>
           </figure>
@@ -421,20 +436,22 @@
               <img
                 src="assets/real/rayo-washing-cartel-horario.jpg"
                 alt="Cartel de Rayo Washing con horario, dirección y oferta de secado"
+                data-i18n-alt="posters.hoursAlt"
                 width="1748"
                 height="2480"
                 loading="lazy"
               />
             </picture>
             <figcaption>
-              <span>Horario y dirección</span>
+              <span data-i18n="posters.hoursCaption">Horario y dirección</span>
               <button
                 type="button"
                 class="poster-zoom"
                 data-lightbox-src="assets/real/rayo-washing-cartel-horario.webp"
                 data-lightbox-alt="Cartel de horario y dirección de Rayo Washing"
+                data-i18n-lbalt="posters.hoursLb"
               >
-                Ampliar
+                <span data-i18n="posters.zoom">Ampliar</span>
               </button>
             </figcaption>
           </figure>
@@ -444,23 +461,23 @@
       <section class="visit" id="ubicacion" aria-labelledby="location-title">
         <div class="section-shell visit-layout">
           <div class="visit-copy">
-            <p class="eyebrow">Ven cuando te vaya bien</p>
-            <h2 id="location-title">Estamos en el centro de Abrera.</h2>
-            <p>
+            <p class="eyebrow" data-i18n="visit.eyebrow">Ven cuando te vaya bien</p>
+            <h2 id="location-title" data-i18n="visit.title">Estamos en el centro de Abrera.</h2>
+            <p data-i18n="visit.text">
               Abiertos los siete días de la semana, de 8:00 a 22:00, junto a una zona de fácil aparcamiento.
             </p>
 
             <dl class="visit-info">
               <div>
-                <dt>Dirección</dt>
+                <dt data-i18n="visit.address">Dirección</dt>
                 <dd>Passeig de l'Estació, 21<br />08630 Abrera, Barcelona</dd>
               </div>
               <div>
-                <dt>Horario</dt>
-                <dd>8:00 — 22:00<br />Todos los días</dd>
+                <dt data-i18n="visit.hours">Horario</dt>
+                <dd>8:00 — 22:00<br /><span data-i18n="visit.everyday">Todos los días</span></dd>
               </div>
               <div>
-                <dt>Teléfono</dt>
+                <dt data-i18n="visit.phone">Teléfono</dt>
                 <dd><a href="tel:+34670607756">670 607 756</a></dd>
               </div>
             </dl>
@@ -471,21 +488,23 @@
                 href="https://www.google.com/maps/place/Rayo+Washing/@41.4623934,1.8692482,25355m/data=!3m1!1e3!4m6!3m5!1s0x12a48bd9d96a1845:0x7cd964cefcde0129!8m2!3d41.5205508!4d1.9028195!16s%2Fg%2F11s0jj27p5?entry=ttu"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-i18n="visit.maps"
               >
                 Abrir Google Maps
               </a>
-              <a class="btn btn-outline" href="https://wa.me/34670607756" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn-outline" href="https://wa.me/34670607756" target="_blank" rel="noopener noreferrer" data-i18n="visit.wa">
                 Escribir por WhatsApp
               </a>
             </div>
           </div>
 
-          <div class="map-frame" aria-label="Mapa real de Rayo Washing en Google Maps">
+          <div class="map-frame" aria-label="Mapa real de Rayo Washing en Google Maps" data-i18n-aria="visit.mapAria">
             <iframe
               title="Ubicación de Rayo Washing en Abrera"
               src="https://www.google.com/maps?q=Rayo%20Washing%20Abrera%2041.5205508,1.9028195&ll=41.5205508,1.9028195&z=16&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              data-i18n-title="visit.mapTitle"
             ></iframe>
           </div>
         </div>
@@ -494,25 +513,25 @@
       <section class="contact" id="contacto" aria-labelledby="contact-title">
         <div class="section-shell contact-layout">
           <div class="contact-copy">
-            <p class="eyebrow eyebrow-light">¿Necesitas preguntarnos algo?</p>
-            <h2 id="contact-title">Hablemos.</h2>
-            <p>Completa el formulario y abriremos WhatsApp con tu mensaje preparado para enviar.</p>
+            <p class="eyebrow eyebrow-light" data-i18n="contact.eyebrow">¿Necesitas preguntarnos algo?</p>
+            <h2 id="contact-title" data-i18n="contact.title">Hablemos.</h2>
+            <p data-i18n="contact.text">Completa el formulario y abriremos WhatsApp con tu mensaje preparado para enviar.</p>
           </div>
 
-          <form class="contact-form" aria-label="Formulario de contacto por WhatsApp">
+          <form class="contact-form" aria-label="Formulario de contacto por WhatsApp" data-i18n-aria="contact.formAria">
             <label>
-              <span>Nombre</span>
-              <input type="text" name="nombre" placeholder="Tu nombre" required />
+              <span data-i18n="contact.name">Nombre</span>
+              <input type="text" name="nombre" placeholder="Tu nombre" data-i18n-placeholder="contact.namePh" required />
             </label>
             <label>
-              <span>Teléfono o email</span>
-              <input type="text" name="contacto" placeholder="Cómo contactarte" required />
+              <span data-i18n="contact.channel">Teléfono o email</span>
+              <input type="text" name="contacto" placeholder="Cómo contactarte" data-i18n-placeholder="contact.channelPh" required />
             </label>
             <label class="form-message">
-              <span>Mensaje</span>
-              <textarea name="mensaje" rows="3" placeholder="Cuéntanos qué necesitas" required></textarea>
+              <span data-i18n="contact.message">Mensaje</span>
+              <textarea name="mensaje" rows="3" placeholder="Cuéntanos qué necesitas" data-i18n-placeholder="contact.messagePh" required></textarea>
             </label>
-            <button class="btn btn-bolt" type="submit">Preparar mensaje</button>
+            <button class="btn btn-bolt" type="submit" data-i18n="contact.submit">Preparar mensaje</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -521,33 +540,33 @@
 
     <footer class="site-footer">
       <div class="section-shell footer-layout">
-        <a class="brand footer-brand" href="#inicio" aria-label="Rayo Washing, volver al inicio">
+        <a class="brand footer-brand" href="#inicio" aria-label="Rayo Washing, volver al inicio" data-i18n-aria="brand.aria">
           <span class="brand-mark" aria-hidden="true">
             <img src="assets/icons/rayo-washing-brand-mark.svg?v=3" alt="" width="128" height="128" />
           </span>
           <span class="brand-text">
             <strong>Rayo Washing</strong>
-            <small>Lavandería autoservicio en Abrera</small>
+            <small data-i18n="footer.tagline">Lavandería autoservicio en Abrera</small>
           </span>
         </a>
 
         <div class="footer-contact">
           <a href="tel:+34670607756">670 607 756</a>
           <span>Passeig de l'Estació, 21</span>
-          <span>Todos los días · 8:00 — 22:00</span>
+          <span data-i18n="footer.everyday">Todos los días · 8:00 — 22:00</span>
         </div>
 
-        <nav aria-label="Enlaces rápidos">
-          <a href="#precios">Precios</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#el-local">El local</a>
-          <a href="#ubicacion">Ubicación</a>
+        <nav aria-label="Enlaces rápidos" data-i18n-aria="footer.linksAria">
+          <a href="#precios" data-i18n="nav.prices">Precios</a>
+          <a href="#servicios" data-i18n="nav.services">Servicios</a>
+          <a href="#el-local" data-i18n="nav.local">El local</a>
+          <a href="#ubicacion" data-i18n="nav.location">Ubicación</a>
         </nav>
 
         <p class="legal">
           © <span id="year"></span> Rayo Washing.
-          <a href="aviso-legal.html">Aviso legal</a>
-          <a href="privacidad.html">Privacidad</a>
+          <a href="aviso-legal.html" data-i18n="footer.legal">Aviso legal</a>
+          <a href="privacidad.html" data-i18n="footer.privacy">Privacidad</a>
         </p>
       </div>
     </footer>
@@ -558,20 +577,21 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Enviar un WhatsApp a Rayo Washing"
+      data-i18n-aria="mobileWa.aria"
     >
       WhatsApp
     </a>
 
     <div class="lightbox" aria-hidden="true">
-      <button class="lightbox-close" type="button" aria-label="Cerrar imagen ampliada">Cerrar</button>
-      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Ver imagen anterior"></button>
+      <button class="lightbox-close" type="button" aria-label="Cerrar imagen ampliada" data-i18n-aria="lightbox.closeAria" data-i18n="lightbox.close">Cerrar</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Ver imagen anterior" data-i18n-aria="lightbox.prevAria"></button>
       <div class="lightbox-stage">
         <img alt="" />
         <span class="lightbox-counter" aria-live="polite"></span>
       </div>
-      <button class="lightbox-nav lightbox-next" type="button" aria-label="Ver imagen siguiente"></button>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Ver imagen siguiente" data-i18n-aria="lightbox.nextAria"></button>
     </div>
 
-    <script src="script.js?v=26"></script>
+    <script src="script.js?v=27"></script>
   </body>
 </html>

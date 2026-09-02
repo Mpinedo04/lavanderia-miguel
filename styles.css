@@ -272,7 +272,7 @@ h3 {
   display: grid;
   width: 100%;
   height: var(--header-height);
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   align-items: center;
   gap: 34px;
   padding: 0 max(32px, calc((100vw - 1180px) / 2));
@@ -343,9 +343,11 @@ h3 {
 
 .main-nav {
   display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 6px 28px;
 }
 
 .main-nav a {
@@ -400,6 +402,47 @@ h3 {
 .site-header.is-scrolled .header-cta:hover {
   color: var(--white);
   background: var(--blue);
+}
+
+/* Language switch */
+.lang-switch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(7, 25, 42, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.lang-btn {
+  min-width: 36px;
+  padding: 9px 8px;
+  color: inherit;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.lang-btn:not(.is-active):hover {
+  color: var(--ink);
+  background: rgba(244, 223, 24, 0.45);
+}
+
+.lang-btn.is-active {
+  color: var(--ink);
+  background: var(--bolt);
+}
+
+.site-header.is-scrolled .lang-switch {
+  border-color: rgba(9, 20, 31, 0.28);
+  background: transparent;
+  backdrop-filter: none;
 }
 
 .nav-toggle {
@@ -2059,13 +2102,21 @@ h3 {
   .site-header,
   .site-header.is-scrolled {
     height: var(--header-height);
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
+    gap: 12px;
     padding-inline: 17px;
     color: var(--ink);
     border-bottom: 0;
     background: rgba(255, 255, 255, 0.96);
     box-shadow: 0 8px 25px rgba(9, 20, 31, 0.08);
     backdrop-filter: blur(14px);
+  }
+
+  .site-header .lang-switch {
+    order: 2;
+    border-color: rgba(9, 20, 31, 0.28);
+    background: transparent;
+    backdrop-filter: none;
   }
 
   .site-header .brand-mark {
@@ -2088,6 +2139,7 @@ h3 {
 
   .nav-toggle {
     display: flex;
+    order: 3;
     width: 43px;
     height: 43px;
     flex-direction: column;
@@ -2664,5 +2716,22 @@ h3 {
   .legal-page .info-list div {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-header {
+    gap: 10px;
+    padding-inline: 13px;
+  }
+
+  .site-header .brand-text strong {
+    font-size: 17px;
+  }
+
+  .lang-btn {
+    min-width: 31px;
+    padding: 8px 6px;
+    font-size: 10px;
   }
 }
