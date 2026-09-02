@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=25" />
+    <link rel="stylesheet" href="styles.css?v=26" />
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -93,8 +93,30 @@
       </nav>
 
       <div class="lang-switch" role="group" aria-label="Cambio de idioma" data-i18n-aria="lang.aria">
-        <button class="lang-btn is-active" type="button" data-lang="es" aria-pressed="true">ES</button>
-        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn is-active" type="button" data-lang="es" aria-pressed="true" aria-label="Español" title="Español">
+          <svg viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <rect width="60" height="30" fill="#AA151B" />
+            <rect y="7.5" width="60" height="15" fill="#F1BF00" />
+          </svg>
+        </button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" aria-label="English" title="English">
+          <svg viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <rect width="60" height="30" fill="#012169" />
+            <path d="M0,0 60,30 M60,0 0,30" stroke="#ffffff" stroke-width="6" />
+            <path d="M0,0 60,30 M60,0 0,30" stroke="#C8102E" stroke-width="3.5" />
+            <path d="M30,0 V30 M0,15 H60" stroke="#ffffff" stroke-width="10" />
+            <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6" />
+          </svg>
+        </button>
+        <button class="lang-btn" type="button" data-lang="ca" aria-pressed="false" aria-label="Català" title="Català">
+          <svg viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <rect width="60" height="30" fill="#FCDD09" />
+            <rect y="3.4" width="60" height="3.3" fill="#C60B1E" />
+            <rect y="10" width="60" height="3.3" fill="#C60B1E" />
+            <rect y="16.7" width="60" height="3.3" fill="#C60B1E" />
+            <rect y="23.3" width="60" height="3.3" fill="#C60B1E" />
+          </svg>
+        </button>
       </div>
 
       <a class="header-cta" href="https://wa.me/34670607756" target="_blank" rel="noopener noreferrer">
@@ -592,6 +614,6 @@
       <button class="lightbox-nav lightbox-next" type="button" aria-label="Ver imagen siguiente" data-i18n-aria="lightbox.nextAria"></button>
     </div>
 
-    <script src="script.js?v=27"></script>
+    <script src="script.js?v=28"></script>
   </body>
 </html>

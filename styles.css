@@ -414,19 +414,29 @@ h3 {
 }
 
 .lang-btn {
-  min-width: 36px;
-  padding: 9px 8px;
+  display: inline-flex;
+  min-width: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 8px;
   color: inherit;
   border: 0;
   background: transparent;
   cursor: pointer;
-  font-size: 11px;
-  font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.08em;
   transition:
     background-color 160ms ease,
     color 160ms ease;
+}
+
+.lang-btn svg {
+  display: block;
+  width: 20px;
+  height: 12px;
+}
+
+.lang-btn + .lang-btn {
+  border-left: 1px solid rgba(9, 20, 31, 0.18);
 }
 
 .lang-btn:not(.is-active):hover {
@@ -2119,6 +2129,16 @@ h3 {
     backdrop-filter: none;
   }
 
+  .site-header .lang-btn {
+    min-width: 31px;
+    padding: 8px 5px;
+  }
+
+  .site-header .lang-btn svg {
+    width: 16px;
+    height: 10px;
+  }
+
   .site-header .brand-mark {
     width: 43px;
     height: 43px;
@@ -2729,9 +2749,13 @@ h3 {
     font-size: 17px;
   }
 
-  .lang-btn {
-    min-width: 31px;
-    padding: 8px 6px;
-    font-size: 10px;
+  .site-header .lang-btn {
+    min-width: 27px;
+    padding: 7px 4px;
+  }
+
+  .site-header .lang-btn svg {
+    width: 14px;
+    height: 9px;
   }
 }
